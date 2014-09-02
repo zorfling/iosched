@@ -15,7 +15,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.samples.apps.iosched">
+    package="com.zorfling.yowconnected">
 
     <application
         android:name=".iowear.WearableApplication"
