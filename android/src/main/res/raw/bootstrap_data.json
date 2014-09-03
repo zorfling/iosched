@@ -647,6 +647,18 @@
       "picture": "77f0a615-6539-4c6d-a885-f631010a91fb.png",
       "thumbnailUrl": "https://confuiimagesproduction.s3.amazonaws.com/uploads/speaker/photo/53f722b4b994cee3a700087b/sanitized_77f0a615-6539-4c6d-a885-f631010a91fb.png",
       "twitter_handle": null
+    },
+    {
+      "id": "54058b23e0596b60cc000429",
+      "name": "Mark Aufflick",
+      "website": "http://htb.io/",
+      "title": "Software Development Consultant, Organiser of Sydney Cocoaheads",
+      "bio": "Mark Aufflick is the founder of The High Technology Bureau, a software development consultancy based in Sydney, organiser of Sydney CocoaHeads and has been co-organiser of Swipe Conference. The fact that he is on the YOW! Connected Program Committee has nothing to do with his talk being accepted. Mark’s work spans finance, healthcare, realestate, social media and geological research. He has been consulting on software development for over two decades and has been involved in the Internet and Apple industries since the mid-90s.",
+      "company": "",
+      "present_photo": true,
+      "picture": "019cae9f-bfd1-4f81-9c31-5976b5032f53.png",
+      "thumbnailUrl": "https://confuiimagesproduction.s3.amazonaws.com/uploads/speaker/photo/54058b23e0596b60cc000429/sanitized_019cae9f-bfd1-4f81-9c31-5976b5032f53.png",
+      "twitter_handle": "@markaufflick"
     }
   ],
   "blocks": [
@@ -838,7 +850,7 @@
     {
       "speakers": ["53dd03e2ef70d532f100004d"],
       "description": "Running an experiment in space usually requires custom hardware to be launched into orbit at enormous cost. ArduSat is a project designed to change that, by maintaining a fleet of general purpose experimental satellites in orbit and allowing anyone with an interest in space science to design and run their own experiments right from their computer. The first three ArduSat satellites have already been launched and many more are on the way. Jonathan Oxer designed the general purpose experiment module called the Payload Processor Module that was launched into orbit in ArduSat-1 and ArduSat-X, allowing anyone from hobbyists and school students to professional researchers to run their own experiments in space. In this talk he'll explain the background of the ArduSat project, the CubeSat satellite architecture, how satellites get into orbit, and the operation of the Payload Processor Module, showing how you can run your very own experiments in orbit.",
-      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "photoUrl": "https://confuiimagesproduction.s3.amazonaws.com/uploads/speaker/photo/53dd03e2ef70d532f100004d/sanitized_2f21d8c1-e8b4-4822-b91f-d27f9ca5ee69.png",
       "url": "https://www.google.com/events/io",
       "startTimestamp": "2014-09-07T23:00:00Z",
       "title": "ArduSat: Open Source In Orbit",
@@ -1141,7 +1153,7 @@
       "captionsUrl": ""
     },
     {
-      "speakers": ["53ce304a0542101d040000c9"],
+      "speakers": ["54058b23e0596b60cc000429"],
       "description": "A brief and whirlwind tour of the problem space of designing and implementing BLE communications between mobile apps and custom developed hardware/firmware where all your targets are moving! We will cover formally documenting the specification, why code-generation is good for you, and api and transport governance.",
       "title": "Bluetooth LE API Design + Code Generation for iOS apps and hardware",
       "url": "https://www.google.com/events/io/schedule/session/5e5915de-0ce1-e311-b297-00155d5066d7",
@@ -1163,6 +1175,7 @@
     {
       "speakers": ["53ce304a0542101d040000c9"],
       "description": "This talk shows how easy it is with very little experience and skills to design and fabricate your own PCB to create your own OSHW Arduino Shield and to scale that to manufacture in low volumes. All you need is the the right tools and a tiny bit of knowledge. I'll look into how to go from breadboard to prototype to making a few working shields to making shields in small volumes (10 boards) to low volume manufacture (100 boards) with minimal effort and cost.",
+      "photoUrl": "https://confuiimagesproduction.s3.amazonaws.com/uploads/speaker/photo/53ce304a0542101d040000c9/sanitized_4883d6d8-c7d7-43fe-b3f0-f8c867c9ee91.png",
       "title": "Creating your own Open Source Arduino Board",
       "url": "https://www.google.com/events/io/schedule/session/5e5915de-0ce1-e311-b297-00155d5066d7",
       "startTimestamp": "2014-09-08T06:30:00Z",
