@@ -16,13 +16,10 @@
 
 package com.zorfling.yowconnected.ui;
 
-import static com.zorfling.yowconnected.util.LogUtils.LOGD;
-import static com.zorfling.yowconnected.util.LogUtils.LOGE;
-import static com.zorfling.yowconnected.util.LogUtils.makeLogTag;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.DialogFragment;
+import android.app.LoaderManager;
+import android.app.LoaderManager.LoaderCallbacks;
 import android.content.*;
 import android.database.ContentObserver;
 import android.database.Cursor;
@@ -32,10 +29,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.app.LoaderManager;
-import android.app.LoaderManager.LoaderCallbacks;
-import android.content.CursorLoader;
-import android.content.Loader;
 import android.text.format.DateUtils;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -43,17 +36,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
-
 import com.google.android.gms.maps.CameraUpdate;
-import com.zorfling.yowconnected.R;
-import com.zorfling.yowconnected.provider.ScheduleContract;
-import com.zorfling.yowconnected.util.*;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.model.*;
-import com.google.android.gms.maps.model.Marker;
 import com.google.maps.android.ui.IconGenerator;
+import com.jakewharton.disklrucache.DiskLruCache;
+import com.zorfling.yowconnected.R;
+import com.zorfling.yowconnected.provider.ScheduleContract;
+import com.zorfling.yowconnected.util.AnalyticsManager;
+import com.zorfling.yowconnected.util.MapUtils;
+import com.zorfling.yowconnected.util.PrefUtils;
+import com.zorfling.yowconnected.util.UIUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,7 +57,8 @@ import java.util.Formatter;
 import java.util.HashMap;
 import java.util.Locale;
 
-import com.jakewharton.disklrucache.DiskLruCache;
+import static com.zorfling.yowconnected.util.LogUtils.LOGD;
+import static com.zorfling.yowconnected.util.LogUtils.makeLogTag;
 
 /**
  * Shows a map of the conference venue.
@@ -72,12 +68,12 @@ public class MapFragment extends com.google.android.gms.maps.MapFragment impleme
         GoogleMap.OnIndoorStateChangeListener, LoaderCallbacks<Cursor>,
         GoogleMap.OnMapLoadedCallback {
 
-    private static final LatLng MOSCONE =  new LatLng(37.783107, -122.403789);
-    private static final LatLng MOSCONE_CAMERA =  new LatLng(37.78308931536713, -122.40409433841705);
+    private static final LatLng MOSCONE =  new LatLng(-37.849734, 144.978564);
+    private static final LatLng MOSCONE_CAMERA =  new LatLng(-37.849734, 144.978564);
 
     // Initial camera zoom
-    private static final float CAMERA_ZOOM = 18.19f;
-    private static final float CAMERA_BEARING = 234.2f;
+    private static final float CAMERA_ZOOM = 18.69f;
+    private static final float CAMERA_BEARING = 74.2f;
 
     private static final int INVALID_FLOOR = Integer.MIN_VALUE;
 

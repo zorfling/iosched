@@ -16,21 +16,19 @@
 
 package com.zorfling.yowconnected.ui;
 
-import android.app.Application;
+import android.app.Fragment;
+import android.app.LoaderManager;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.app.LoaderManager;
-import android.content.CursorLoader;
-import android.content.Loader;
-import android.widget.*;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.*;
 import com.zorfling.yowconnected.R;
 import com.zorfling.yowconnected.provider.ScheduleContract;
 import com.zorfling.yowconnected.ui.widget.CollectionView;
@@ -219,7 +217,7 @@ public class HashtagsFragment extends Fragment implements LoaderManager.LoaderCa
             });
 
             final String desc = cursor.getString(HashtagsQuery.HASHTAG_DESCRIPTION);
-            holder.name.setText(hashtag.replace("#io14 ", ""));
+            holder.name.setText(hashtag.replace("#yowconnected ", ""));
             if (!TextUtils.isEmpty(desc)) {
                 holder.description.setVisibility(View.VISIBLE);
                 holder.description.setOnClickListener(new View.OnClickListener() {
