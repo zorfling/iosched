@@ -28,10 +28,7 @@ import android.database.DataSetObserver;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-
 import com.zorfling.yowconnected.R;
 import com.zorfling.yowconnected.nearby.MetadataResolver;
 import com.zorfling.yowconnected.nearby.NearbyDeviceManager;
@@ -104,7 +101,7 @@ public abstract class NearbyActivity extends BaseActivity implements NearbyFragm
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (mNearbyCapable) {
+        /*if (mNearbyCapable) {
             getMenuInflater().inflate(R.menu.nearby, menu);
             MenuItem nearbyItem = menu.findItem(R.id.menu_nearby);
             mNearbyButton =
@@ -116,7 +113,7 @@ public abstract class NearbyActivity extends BaseActivity implements NearbyFragm
                 }
             });
             updateNearbyButton();
-        }
+        }*/
         return super.onCreateOptionsMenu(menu);
     }
 

@@ -40,7 +40,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.bumptech.glide.GenericRequestBuilder;
+import com.bumptech.glide.ListPreloader;
 import com.zorfling.yowconnected.Config;
 import com.zorfling.yowconnected.R;
 import com.zorfling.yowconnected.model.TagMetadata;
@@ -55,9 +56,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.TimeZone;
-
-import com.bumptech.glide.GenericRequestBuilder;
-import com.bumptech.glide.ListPreloader;
 
 import static com.zorfling.yowconnected.util.LogUtils.*;
 import static com.zorfling.yowconnected.util.UIUtils.buildStyledSnippet;
@@ -866,6 +864,7 @@ public class SessionsFragment extends Fragment implements
     }
 
     private boolean setupMessageCard(View hero) {
+        final Context context = getActivity().getApplicationContext();
         MessageCardView card = (MessageCardView) hero.findViewById(R.id.message_card);
         if (card == null) {
             LOGE(TAG, "Message card not found in UI (R.id.message_card).");
@@ -874,7 +873,10 @@ public class SessionsFragment extends Fragment implements
         if (!PrefUtils.hasAnsweredLocalOrRemote(getActivity()) &&
                 !TimeUtils.hasConferenceEnded(getActivity())) {
             // show the "in person" vs "remote" card
-            setupLocalOrRemoteCard(card);
+            //setupLocalOrRemoteCard(card);
+            // Force in person since YOW doesn't live stream
+            PrefUtils.setAttendeeAtVenue(context, true);
+            PrefUtils.markAnsweredLocalOrRemote(context);
             return true;
         } else if (WiFiUtils.shouldOfferToSetupWifi(getActivity(), true)) {
             // show wifi setup card
