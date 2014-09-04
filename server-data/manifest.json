@@ -1,0 +1,12 @@
+{
+    "format": "iosched-json-v1",
+    "data_files": [
+        "blocks_v1.json",
+        "experts_v1.json",
+        "hashtags_v1.json",
+        "map_v1.json",
+        "partners_v1.json",
+        "session_data_v1.json",
+        "videos_v1.json"
+    ]
+}

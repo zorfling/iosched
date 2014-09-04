@@ -1,0 +1,34 @@
+{
+  "hashtags": [
+    {
+      "color": "#303f9f",
+      "order": 1,
+      "name": "#yowconnected",
+      "description": "Follow the general Google+ social conversation happening around YOW! Connected 2014."
+    },
+    {
+      "color": "#9fa8da",
+      "order": 4,
+      "name": "#yowconnected #keynote",
+      "description": "Follow the Google+ social conversation about the Keynote at YOW! Connected 2014."
+    },
+    {
+      "color": "#80cbc4",
+      "order": 5,
+      "name": "#yowconnected #afterhours",
+      "description": "Check out the highlights of the After Hours."
+    },
+    {
+      "color": "#3f51b5",
+      "order": 2,
+      "name": "#yowconnected #mobile",
+      "description": "Follow the Google+ social conversation about \"Mobile\" at YOW! Connected 2014."
+    },
+    {
+      "color": "#03a9f4",
+      "order": 3,
+      "name": "#yowconnected #iot",
+      "description": "Follow the Google+ social conversation about \"Internet of Things\" at I/O 2014."
+    }
+  ]
+}
