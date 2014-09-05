@@ -3,6 +3,9 @@
     {
       "tiles": {
       },
+      "config": {
+        "enableMyLocation": "false"
+      },
       "markers": {
       }
     }
