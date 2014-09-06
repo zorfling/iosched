@@ -878,14 +878,14 @@ public class SessionsFragment extends Fragment implements
             PrefUtils.setAttendeeAtVenue(context, true);
             PrefUtils.markAnsweredLocalOrRemote(context);
             return true;
-        } else if (WiFiUtils.shouldOfferToSetupWifi(getActivity(), true)) {
+        /*} else if (WiFiUtils.shouldOfferToSetupWifi(getActivity(), true)) {
             // show wifi setup card
             //setupWifiOfferCard(card);
             return true;
         } else if (PrefUtils.shouldOfferIOExtended(getActivity(), true)) {
             // show the I/O extended card
             //setupIOExtendedCard(card);
-            return true;
+            return true;*/
         } else {
             card.setVisibility(View.GONE);
             return false;
