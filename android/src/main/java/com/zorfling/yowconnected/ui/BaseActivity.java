@@ -676,14 +676,6 @@ public abstract class BaseActivity extends Activity implements
                 HelpUtils.showAbout(this);
                 return true;
 
-            case R.id.menu_wifi:
-                WiFiUtils.showWiFiDialog(this);
-                return true;
-
-            case R.id.menu_i_o_hunt:
-                launchIoHunt();
-                return true;
-
             case R.id.menu_debug:
                 if (BuildConfig.DEBUG) {
                     startActivity(new Intent(this, DebugActionRunnerActivity.class));
@@ -692,11 +684,6 @@ public abstract class BaseActivity extends Activity implements
 
             case R.id.menu_refresh:
                 requestDataRefresh();
-                break;
-
-            case R.id.menu_io_extended:
-                startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse(Config.IO_EXTENDED_LINK)));
                 break;
 
             case R.id.menu_map:
@@ -832,19 +819,9 @@ public abstract class BaseActivity extends Activity implements
     }
 
     protected void configureStandardMenuItems(Menu menu) {
-        MenuItem wifiItem = menu.findItem(R.id.menu_wifi);
-        if (wifiItem != null && !WiFiUtils.shouldOfferToSetupWifi(this, false)) {
-            wifiItem.setVisible(false);
-        }
-
         MenuItem debugItem = menu.findItem(R.id.menu_debug);
         if (debugItem != null) {
             debugItem.setVisible(BuildConfig.DEBUG);
-        }
-
-        MenuItem ioExtendedItem = menu.findItem(R.id.menu_io_extended);
-        if (ioExtendedItem != null) {
-            ioExtendedItem.setVisible(PrefUtils.shouldOfferIOExtended(this, false));
         }
 
         // if attendee is remote, show map on the overflow instead of on the nav bar
@@ -854,10 +831,6 @@ public abstract class BaseActivity extends Activity implements
             mapItem.setVisible(isRemote);
         }
 
-        MenuItem ioHuntItem = menu.findItem(R.id.menu_i_o_hunt);
-        if (ioHuntItem != null) {
-            ioHuntItem.setVisible(!isRemote && !TextUtils.isEmpty(Config.IO_HUNT_PACKAGE_NAME));
-        }
     }
 
     @Override

@@ -499,7 +499,6 @@ public class BrowseSessionsActivity extends BaseActivity implements SessionsFrag
         if (mMode != MODE_EXPLORE) {
             menu.removeItem(R.id.menu_search);
             menu.removeItem(R.id.menu_refresh);
-            menu.removeItem(R.id.menu_wifi);
             menu.removeItem(R.id.menu_debug);
             menu.removeItem(R.id.menu_about);
         } else {
