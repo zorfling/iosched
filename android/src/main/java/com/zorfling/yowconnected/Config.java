@@ -75,7 +75,7 @@ public class Config {
     public static final long DAY_MILLIS = 24 * HOUR_MILLIS;
 
     // OAuth 2.0 related config
-    public static final String APP_NAME = "GoogleIO-Android";
+    public static final String APP_NAME = "YOWConnected-Android";
     public static final String API_KEY = "";
 
     // Announcements
@@ -91,8 +91,8 @@ public class Config {
     public static final String LIVESTREAM_CAPTIONS_DARK_THEME_URL_PARAM = "&theme=dark";
 
     // Conference public WiFi AP parameters
-    public static final String WIFI_SSID = "IO2014";
-    public static final String WIFI_PASSPHRASE = "letsdothis";
+    public static final String WIFI_SSID = "";
+    public static final String WIFI_PASSPHRASE = "";
 
     // GCM config
     public static final String GCM_SERVER_PROD_URL = "";

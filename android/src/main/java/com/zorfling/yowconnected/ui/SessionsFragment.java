@@ -880,11 +880,11 @@ public class SessionsFragment extends Fragment implements
             return true;
         } else if (WiFiUtils.shouldOfferToSetupWifi(getActivity(), true)) {
             // show wifi setup card
-            setupWifiOfferCard(card);
+            //setupWifiOfferCard(card);
             return true;
         } else if (PrefUtils.shouldOfferIOExtended(getActivity(), true)) {
             // show the I/O extended card
-            setupIOExtendedCard(card);
+            //setupIOExtendedCard(card);
             return true;
         } else {
             card.setVisibility(View.GONE);

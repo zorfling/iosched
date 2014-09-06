@@ -193,11 +193,11 @@ public abstract class BaseActivity extends Activity implements
         PrefUtils.init(this);
 
         // Check if the EULA has been accepted; if not, show it.
-        if (!PrefUtils.isTosAccepted(this)) {
+        /*if (!PrefUtils.isTosAccepted(this)) {
             Intent intent = new Intent(this, WelcomeActivity.class);
             startActivity(intent);
             finish();
-        }
+        }*/
 
         mImageLoader = new ImageLoader(this);
         mHandler = new Handler();
